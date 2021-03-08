@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+
+      .titolo {
+        text-align: center;
+        color: red;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <h1 class="titolo"> Ciao Mondo</h1>
+    <h1 class="titolo" id="lol"> Lorem Ipsum</h1>
+
+    <script type="text/javascript">
+
+        // GOAL: 
+        // Chiedere all'utente il suo cognome e inserirlo in un array non ordinato. 
+        // Riordinare l'array e stampare la lista dei cognomi in ordine alfabetico e la posizione "umana" (partendo da 1) del cognome dell'utente.
+        
+        var surnameArray = [`Scalvini`, `Antonelli`, `Battistini`, `Masnada`];
+        var request = prompt("Inserisci il tuo cognome");
+        surnameArray.push(request);
+        console.log(`Array non ordinato: ${surnameArray}`);
+        surnameArray.sort();
+        console.log(`Array ordinato: ${surnameArray}`);
+
+                    // Versione che stampa la posizione umana nell'elemento inserito
+
+        for (let i = 0; i < surnameArray.length; i++) {
+            if (surnameArray[i] === request) {
+                console.log(`Cognome: ${surnameArray[i]} || Posizione: ${i + 1}`);
+            } else {
+                console.log(`Cognome: ${surnameArray[i]}`);
+            }
+        }
+                // Versione che stampa la posizione umana in tutti gli elementi
+
+        for (let i = 0; i < surnameArray.length; i++) {
+            console.log(`Versione posizione su tutti--------> Cognome: ${surnameArray[i]} || Posizione: ${i + 1}`);            
+        }
+
+    </script>
+  </body>
+</html>
